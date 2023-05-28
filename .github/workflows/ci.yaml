@@ -16,4 +16,4 @@ jobs:
       - run: npm ci
       - run: npm run publish
         env:
-          VSCODE_MARKETPLACE_PAT: ${{ secrets.VSCODE_MARKETPLACE_PAT }}
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
