@@ -9,17 +9,20 @@ const bool: boolean = true;
 const nul: null = null;
 const symb: symbol = Symbol("abc");
 
+/** Types. */
+export type MyType = { a: string; b: MyClass };
+
 /**
  * Class
  * @param something Initialises the thing.
  */
-export class MySuperClass extends MyClass {
-	public readonly something: string;
+export class MySuperClass<T extends string> extends MyClass {
+	public readonly myProp: string;
 
 	/** Constructor. */
-	constructor(something: string = str) {
+	constructor(myProp: string = str) {
 		super(string);
-		this.something = something;
+		this.myProp = myProp;
 	}
 
 	/** Method. */
@@ -28,4 +31,9 @@ export class MySuperClass extends MyClass {
 	myMethod1(): number {
 		return num;
 	}
+}
+
+/** Function. */
+export function something(myParam: string, param2: MyClass): MySuperClass {
+	return new MySuperClass(myParam);
 }

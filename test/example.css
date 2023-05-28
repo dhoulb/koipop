@@ -1,0 +1,15 @@
+:root {
+	--my-color-1: #00ccff;
+	--my-color-2: rgba(100, 200, 50, 0.6);
+
+	--my-font: system-ui, -apple-system, -apple-system-font, "Segoe UI", roboto, sans-serif;
+
+	--my-size-1: 12rem;
+	--my-size-2: calc(var(--my-size-1 * 2));
+}
+
+.my-class:has(.my-class-content) {
+	font-family: var(--my-font);
+	font-size: var(--my-size-1);
+	color: var(--my-color-1);
+}
