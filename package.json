@@ -1,7 +1,7 @@
 {
-	"name": "davokai",
-	"displayName": "Davokai",
-	"description": "Monokai-based color theme for VSCode with Dave improvements.",
+	"name": "koipop",
+	"displayName": "Koipop",
+	"description": "Cool relaxing color theme for VS Code with vibrant assertive token colors.",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.78.0"
@@ -12,9 +12,14 @@
 	"contributes": {
 		"themes": [
 			{
-				"label": "Davokai Dark",
+				"label": "Koipop Dark",
 				"uiTheme": "vs-dark",
-				"path": "./themes/davokai-dark.json"
+				"path": "./themes/koipop-dark.json"
+			},
+			{
+				"label": "Koipop Light (incomplete)",
+				"uiTheme": "vs",
+				"path": "./themes/koipop-light.json"
 			}
 		]
 	},
