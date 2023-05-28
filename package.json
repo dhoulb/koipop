@@ -1,0 +1,29 @@
+{
+	"name": "davokai",
+	"displayName": "Davokai",
+	"description": "Monokai-based color theme for VSCode with Dave improvements.",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.78.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Davokai Dark",
+				"uiTheme": "vs-dark",
+				"path": "./themes/davokai-dark.json"
+			}
+		]
+	},
+	"scripts": {
+		"fix": "prettier '**/*.{md,html,yml,yaml,json,css,js,ts}' --write",
+		"publish": "vsce publish"
+	},
+	"devDependencies": {
+		"@vscode/vsce": "^2.19.0",
+		"prettier": "^2.8.8"
+	}
+}
