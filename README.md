@@ -11,4 +11,5 @@
 - Use `npm run publish` command to publish locally.
 - Requires the `VSCE_PAT` environment token to be in scope:
   - Create an [Azure Devops](https://learn.microsoft.com/azure/devops/organizations/accounts/create-organization) organisation
+  - Generate a Personal Access Token within the organisation (give it the `Marketplace → Manage` scope).
   - Create a [Visual Studio Marketplace Publisher](https://marketplace.visualstudio.com/manage) profile
