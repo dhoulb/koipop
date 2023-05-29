@@ -2,7 +2,7 @@
 
 ## Development
 
-- Use the `Start Debugging` command (`F5`) in VSCode to launch this extension in a new VSCode window.
+- Use the `Start Debugging` command (`F5`) in VS Code to launch this extension in a new VS Code window.
 - Updates will automatically refresh in the new window.
 - Code examples in the `./tests` folder to test against.
 - Publish using `npm run publish` (or push to GitHub to publish automatically).
@@ -56,3 +56,7 @@
   --color-white: white;
 }
 ```
+
+## References
+
+- [VS Code Theme Color Reference](https://code.visualstudio.com/api/references/theme-color#editor-colors)
