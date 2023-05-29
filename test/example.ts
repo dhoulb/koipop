@@ -12,15 +12,20 @@ const symb: symbol = Symbol("abc");
 /** Types. */
 export type MyType = { a: string; b: MyClass };
 
+/** Function. */
+export function something(myParam: string, param2: MyClass): MySuperClass {
+	return new MySuperClass(myParam);
+}
+
 /**
  * Class
- * @param something Initialises the thing.
+ * @param why Initialises the thing.
  */
 export class MySuperClass<T extends string> extends MyClass {
-	public readonly myProp: string;
+	public readonly myProp: T;
 
 	/** Constructor. */
-	constructor(myProp: string = str) {
+	constructor(myProp: T = str) {
 		super(string);
 		this.myProp = myProp;
 	}
@@ -31,9 +36,4 @@ export class MySuperClass<T extends string> extends MyClass {
 	myMethod1(): number {
 		return num;
 	}
-}
-
-/** Function. */
-export function something(myParam: string, param2: MyClass): MySuperClass {
-	return new MySuperClass(myParam);
 }
