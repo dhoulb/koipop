@@ -2,6 +2,12 @@
 	"name": "koipop",
 	"displayName": "Koipop",
 	"description": "Cool relaxing color theme for VS Code with vibrant assertive token colors.",
+	"icon": "img/logo.png",
+	"repository": {
+		"type": "https",
+		"url": "https://github.com/dhoulb/koipop"
+	},
+	"author": "Dave Houlbrooke <dave@shax.com>",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.78.0"
