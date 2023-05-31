@@ -19,12 +19,16 @@ jobs:
           BOT_PUBLIC_KEY: ${{ vars.BOT_PUBLIC_KEY }}
           BOT_PRIVATE_KEY: ${{ secrets.BOT_PRIVATE_KEY }}
         run: |
+          mkdir ~/.ssh
+          install -m 600 <(echo "$BOT_PUBLIC_KEY") ~/.ssh/git.pub
+          install -m 600 <(echo "$BOT_PRIVATE_KEY") ~/.ssh/git
           eval `ssh-agent -s`
-          ssh-add - <<< "${BOT_PRIVATE_KEY}"
+          ssh-add ~/.ssh/git
           git config user.name "${BOT_USER_NAME}"
           git config user.email "${BOT_USER_ID}+${BOT_USER_NAME}@users.noreply.github.com"
           git config --global gpg.format ssh
-          git config --global user.signingkey "key::${SSH_PUBLIC_KEY}"
+          git config --global user.signingkey ~/.ssh/git.pub
+          git config --global commit.gpgsign true
       - shell: bash
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
