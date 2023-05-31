@@ -8,7 +8,7 @@
 	--my-size-2: calc(var(--my-size-1 * 2));
 }
 
-#something {
+#something[attr="something"] {
 	--color: #ffcc00;
 }
 
