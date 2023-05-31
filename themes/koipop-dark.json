@@ -235,41 +235,41 @@
 		},
 		{
 			"name": "Green: functions e.g. `myFunc()`",
-			"scope": ["entity.name.function"],
+			"scope": ["entity.name.function", "support.function"],
 			"settings": {
 				"foreground": "#92f416"
 			}
 		},
 		{
 			"name": "Yellow: classes e.g. `new MyClass()`",
-			"scope": ["entity.name.type.class", "entity.other.inherited-class", "variable.language.this", "variable.language.super", "markup.bold", "markup.italic"],
+			"scope": ["entity.name.type.class", "entity.other.inherited-class", "variable.language.this", "variable.language.super", "markup.bold", "markup.italic", "entity.name.tag"],
 			"settings": {
 				"foreground": "#ffe01a"
 			}
 		},
 		{
 			"name": "Purple: numbers e.g `123`, constants e.g. `null`",
-			"scope": ["constant.numeric", "constant.language"],
+			"scope": ["constant.numeric", "constant.language", "support.constant"],
 			"settings": {
 				"foreground": "#f047ff"
 			}
 		},
 		{
 			"name": "Pink: keywords e.g. `export` or `readonly` or `private`, declarations e.g. `const` and `function`",
-			"scope": ["keyword.control", "keyword.operator.new", "storage.modifier", "storage.type"],
+			"scope": ["keyword.control", "keyword.operator.new", "storage.modifier", "storage.type", "entity.other.attribute-name.pseudo-class"],
 			"settings": {
 				"foreground": "#f43789"
 			}
 		},
 		{
 			"name": "Cyan: primitive types e.g. `string`, complex types e.g. `MyType`",
-			"scope": ["support.type.builtin", "support.type.primitive", "entity.name.type", "punctuation.definition.heading", "string.other.link.title"],
+			"scope": ["support.type.builtin", "support.type.primitive", "entity.name.type", "punctuation.definition.heading", "string.other.link.title", "entity.other.attribute-name"],
 			"settings": {
 				"foreground": "#15f4e5"
 			}
 		},
 		{
-			"name": "Cyan: primitive types e.g. `string`, complex types e.g. `MyType`",
+			"name": "Dark cyan: primitive types e.g. `string`, complex types e.g. `MyType`",
 			"scope": ["markup.underline.link"],
 			"settings": {
 				"foreground": "#15f4e588"
@@ -291,7 +291,7 @@
 		},
 		{
 			"name": "White: variables, object keys, markup",
-			"scope": ["variable", "support.type.property-name", "entity.name.label", "meta.object-literal.key string", "markup", "markup string"],
+			"scope": ["variable", "support.type.property-name", "entity.name.label", "meta.object-literal.key string", "markup", "markup string", "meta.paragraph", "constant.other.color"],
 			"settings": {
 				"foreground": "#ffffff"
 			}

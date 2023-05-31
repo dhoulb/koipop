@@ -5,8 +5,3 @@
 ![Screenshot](img/screenshot1.png)
 
 ![Screenshot](img/screenshot2.png)
-
-## Todo
-
-- [ ] Optimise colours for Markdown.
-- [ ] Optimise colours for CSS.
