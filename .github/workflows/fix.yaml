@@ -19,10 +19,8 @@ jobs:
           BOT_PRIVATE_KEY: ${{ secrets.BOT_PRIVATE_KEY }}
         run: |
           mkdir ~/.ssh
-          install -m 777 ~/.ssh/ git.pub
-          install -m 777 ~/.ssh/ git
-          echo "$BOT_PUBLIC_KEY" > ~/.ssh/git.pub
-          echo "$BOT_PRIVATE_KEY" > ~/.ssh/git
+          install -m 600 <(echo "$BOT_PUBLIC_KEY") ~/.ssh/git.pub
+          install -m 600 <(echo "$BOT_PRIVATE_KEY") ~/.ssh/git
           eval `ssh-agent -s`
           ssh-add ~/.ssh/git
           git config user.name "${BOT_USER_NAME}"
