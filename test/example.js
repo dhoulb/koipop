@@ -5,20 +5,25 @@ import { MyClass, myDecorator1, myDecorator2 } from "somewhere";
 // Vars.
 const str = "abc";
 const num = 123;
-const bool = true;
-const nul = null;
-const symb = Symbol("abc");
 
-/** Function. */
+/**
+ * Function.
+ * @type {(myParam: string) => MySuperClass} The first param.
+ */
 export function myFunc(myParam, param2) {
+	// This is a comment.
 	return new MySuperClass(myParam);
 }
 
+/**
+ * Value
+ * @type {MySuperClass} The value of the thing.
+ */
 export const myValue = myFunc(str, new MyClass());
 
 /**
  * Class
- * @param why Initialises the thing.
+ * @param {string} myProp Initialises the thing.
  */
 export class MySuperClass extends MyClass {
 	/** Constructor. */
