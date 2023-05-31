@@ -8,7 +8,11 @@
 	--my-size-2: calc(var(--my-size-1 * 2));
 }
 
-.my-class:has(.my-class-content) {
+#something {
+	--color: #ffcc00;
+}
+
+button.my-class:has(.my-class-content) {
 	font-family: var(--my-font);
 	font-size: var(--my-size-1);
 	color: var(--my-color-1);
