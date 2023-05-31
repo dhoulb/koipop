@@ -18,6 +18,7 @@ jobs:
           BOT_PUBLIC_KEY: ${{ vars.BOT_PUBLIC_KEY }}
           BOT_PRIVATE_KEY: ${{ secrets.BOT_PRIVATE_KEY }}
         run: |
+          mkdir ~/.ssh
           echo "$BOT_PUBLIC_KEY" > ~/.ssh/git.pub
           echo "$BOT_PRIVATE_KEY" > ~/.ssh/git
           eval `ssh-agent -s`
