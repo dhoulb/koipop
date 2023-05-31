@@ -23,11 +23,6 @@
 				"label": "Koipop Dark",
 				"uiTheme": "vs-dark",
 				"path": "./themes/koipop-dark.json"
-			},
-			{
-				"label": "Koipop Light",
-				"uiTheme": "vs",
-				"path": "./themes/koipop-light.json"
 			}
 		]
 	},
