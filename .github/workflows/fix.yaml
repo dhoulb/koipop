@@ -6,18 +6,17 @@ jobs:
   fix:
     name: Fix
     runs-on: ubuntu-latest
-    env:
-      BOT_USER_NAME: ${{ secrets.BOT_USER_NAME }}
-      BOT_USER_ID: ${{ secrets.BOT_USER_ID }}
-      BOT_PUBLIC_KEY: ${{ secrets.BOT_PUBLIC_KEY }}
-      BOT_PRIVATE_KEY: ${{ secrets.BOT_PRIVATE_KEY }}
-      VSCE_PAT: ${{ secrets.VSCE_PAT }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 18
       - shell: bash
+        env:
+          BOT_USER_NAME: ${{ vars.BOT_USER_NAME }}
+          BOT_USER_ID: ${{ vars.BOT_USER_ID }}
+          BOT_PUBLIC_KEY: ${{ vars.BOT_PUBLIC_KEY }}
+          BOT_PRIVATE_KEY: ${{ secrets.BOT_PRIVATE_KEY }}
         run: |
           eval `ssh-agent -s`
           ssh-add - <<< "${BOT_PRIVATE_KEY}"
@@ -26,6 +25,8 @@ jobs:
           git config --global gpg.format ssh
           git config --global user.signingkey "key::${SSH_PUBLIC_KEY}"
       - shell: bash
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
         run: |
           npm ci
           npm run fix
