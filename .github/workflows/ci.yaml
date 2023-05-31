@@ -7,12 +7,25 @@ jobs:
     name: Publish
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    env:
+      BOT_USER_NAME: ${{ vars.BOT_USER_NAME }}
+      BOT_USER_ID: ${{ vars.BOT_USER_ID }}
+      BOT_PUBLIC_KEY: ${{ vars.BOT_PUBLIC_KEY }}
+      BOT_PRIVATE_KEY: ${{ secrets.BOT_PRIVATE_KEY }}
+      VSCE_PAT: ${{ secrets.VSCE_PAT }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: npm ci
-      - run: npm run publish minor
-        env:
-          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+      - shell: bash
+        run: |
+          ssh-add - <<< "${BOT_PRIVATE_KEY}"
+          git config user.name "${BOT_USER_NAME}"
+          git config user.email "${BOT_USER_ID}+${BOT_USER_NAME}@users.noreply.github.com"
+          git config --global gpg.format ssh
+          git config --global user.signingkey "key::${SSH_PUBLIC_KEY}"
+      - shell: bash
+        run: |
+          npm ci
+          npm run publish minor
