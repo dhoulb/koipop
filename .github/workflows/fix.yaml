@@ -19,6 +19,7 @@ jobs:
           BOT_PRIVATE_KEY: ${{ secrets.BOT_PRIVATE_KEY }}
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
         run: |
+          eval `ssh-agent -s`
           ssh-add - <<< "${BOT_PRIVATE_KEY}"
           git config user.name "${BOT_USER_NAME}"
           git config user.email "${BOT_USER_ID}+${BOT_USER_NAME}@users.noreply.github.com"
