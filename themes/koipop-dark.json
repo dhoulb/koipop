@@ -234,7 +234,7 @@
 			}
 		},
 		{
-							"name": "Green: functions e.g. `myFunc()`",
+			"name": "Green: functions e.g. `myFunc()`",
 			"scope": ["entity.name.function", "support.function"],
 			"settings": {
 				"foreground": "#92f416"
