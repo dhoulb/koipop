@@ -10,7 +10,7 @@
 		"type": "https",
 		"url": "https://github.com/dhoulb/koipop"
 	},
-	"version": "0.0.1",
+	"version": "0.2.0",
 	"engines": {
 		"vscode": "^1.78.0"
 	},
