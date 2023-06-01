@@ -32,4 +32,4 @@ jobs:
         run: |
           npm ci
           npm run fix
-          git commit -am 'style: npm run fix' && git push origin main
+          git commit -am 'style: npm run fix' && git push
