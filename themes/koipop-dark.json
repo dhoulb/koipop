@@ -242,7 +242,7 @@
 		},
 		{
 			"name": "Yellow: classes e.g. `new MyClass()`",
-			"scope": ["entity.name.type.class", "entity.other.inherited-class", "variable.language.this", "variable.language.super", "markup.bold", "markup.italic", "entity.name.tag"],
+			"scope": ["entity.name.type.class", "entity.other.inherited-class", "variable.language.this", "variable.language.super", "markup.bold", "markup.italic"],
 			"settings": {
 				"foreground": "#ffe01a"
 			}
@@ -256,7 +256,7 @@
 		},
 		{
 			"name": "Pink: keywords e.g. `export` or `readonly` or `private`, declarations e.g. `const` and `function`",
-			"scope": ["keyword.control", "keyword.operator.new", "storage.modifier", "storage.type", "entity.other.attribute-name.pseudo-class"],
+			"scope": ["keyword.control", "keyword.operator.new", "storage.modifier", "storage.type", "entity.other.attribute-name.pseudo-class", "entity.name.tag"],
 			"settings": {
 				"foreground": "#f43789"
 			}
@@ -269,7 +269,7 @@
 			}
 		},
 		{
-			"name": "Dark cyan: primitive types e.g. `string`, complex types e.g. `MyType`",
+			"name": "Dark cyan: markdown links",
 			"scope": ["markup.underline.link"],
 			"settings": {
 				"foreground": "#15f4e588"
@@ -284,14 +284,14 @@
 		},
 		{
 			"name": "Red: errors",
-			"scope": [],
+			"scope": ["invalid"],
 			"settings": {
 				"foreground": "#e5352f"
 			}
 		},
 		{
 			"name": "White: variables, object keys, markup",
-			"scope": ["variable", "support.type.property-name", "entity.name.label", "meta.object-literal.key string", "markup", "markup string", "meta.paragraph", "constant.other.color"],
+			"scope": ["variable", "support.type.property-name", "entity.name.label", "meta.object-literal.key string", "markup", "markup string", "meta.paragraph", "constant.other.color", "text.html.derivative"],
 			"settings": {
 				"foreground": "#ffffff"
 			}
