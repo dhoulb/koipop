@@ -256,7 +256,7 @@
 		},
 		{
 			"name": "Pink: keywords e.g. `export` or `readonly` or `private`, declarations e.g. `const` and `function`",
-			"scope": ["keyword.control", "keyword.operator.new", "storage.modifier", "storage.type", "entity.other.attribute-name.pseudo-class", "entity.name.tag"],
+			"scope": ["keyword.control", "keyword.operator.new", "keyword.operator.expression", "storage.modifier", "storage.type", "entity.other.attribute-name.pseudo-class", "entity.name.tag"],
 			"settings": {
 				"foreground": "#f43789"
 			}
