@@ -5,12 +5,12 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   fix:
     name: Fix
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: 18
+          node-version: 24
       - shell: bash
         env:
           BOT_USER_NAME: ${{ vars.BOT_USER_NAME }}
