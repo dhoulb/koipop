@@ -1,19 +1,27 @@
-# Runs tests on any push or pull request.
-# If the tests pass and this is a push to the main branch also run Semantic Release.
+# Publishes to the VS Code Marketplace when a push to main changes the published theme.
+# Tooling-only changes (workflows, dependencies, tests) do not publish. Run manually to force a publish.
 name: CI
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    branches: [main]
+    paths:
+      - "themes/**"
+      - "img/**"
+      - "README.md"
+      - "LICENSE.md"
+  workflow_dispatch:
 jobs:
   release:
     name: Publish
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     permissions:
       contents: write
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: 18
+          node-version: 24
       - shell: bash
         env:
           BOT_USER_NAME: ${{ vars.BOT_USER_NAME }}
