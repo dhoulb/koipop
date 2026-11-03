@@ -13,6 +13,8 @@
 		"badge.foreground": "#f1f2f4",
 		"badge.background": "#454b54",
 		"sash.hoverBorder": "#454b54",
+		"modernUI.shellBackground": "#191b1f",
+		"modernUI.inactiveShellBackground": "#191b1f",
 		"textBlockQuote.background": "#22252a",
 		"textBlockQuote.border": "#2e3238",
 		"textCodeBlock.background": "#22252a",
