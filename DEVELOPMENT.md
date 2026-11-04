@@ -7,6 +7,16 @@
 - Code examples in the `./tests` folder to test against.
 - Publish using `npm run publish` (or push to GitHub to publish automatically).
 
+## Light theme
+
+- `themes/koipop-dark.json` is the source of truth. Do not edit `themes/koipop-light.json` by hand.
+- After you change the dark theme, run `npm run build:light` to regenerate the light theme.
+- `scripts/build-light.js` maps each dark grey to its role on the light end of the same scale. Accent text uses a darker shade of the same hue, so it reads on white.
+
+## Screenshots
+
+- Marketplace screenshots are in `img/screenshots/`. The README links to them, and `vsce` rewrites the links to GitHub, so they are not in the `.vsix` (see `.vscodeignore`).
+
 ## Authorisation
 
 - Requires the `VSCE_PAT` environment token to be in scope.
