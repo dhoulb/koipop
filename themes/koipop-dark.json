@@ -381,7 +381,8 @@
 				"storage.type.error.go",
 				"storage.type.byte.go",
 				"storage.type.rune.go",
-				"storage.type.uintptr.go"
+				"storage.type.uintptr.go",
+				"storage.type.sql"
 			],
 			"settings": {
 				"foreground": "#15f4e5"
@@ -409,7 +410,7 @@
 			}
 		},
 		{
-			"name": "White: variables, object keys, markup, plain identifiers in languages that leave them unscoped (Python, Ruby, Rust, SQL)",
+			"name": "White: variables, object keys, markup, plain identifiers in languages that leave them unscoped (Python, Ruby, Rust)",
 			"scope": [
 				"variable",
 				"support.type.property-name",
@@ -423,10 +424,11 @@
 				"source.python",
 				"source.ruby",
 				"source.rust",
-				"source.sql",
 				"constant.other.php",
 				"constant.other.class.php",
-				"entity.name.tag.yaml"
+				"entity.name.tag.yaml",
+				"constant.other.table-name.sql",
+				"constant.other.database-name.sql"
 			],
 			"settings": {
 				"foreground": "#ffffff"
@@ -434,7 +436,18 @@
 		},
 		{
 			"name": "Grey: punctuation, operators, comments and docstrings",
-			"scope": ["comment", "punctuation", "storage.type.function.arrow", "meta.brace", "keyword.operator", "string.quoted.docstring", "constant.character.format.placeholder.other.python"],
+			"scope": [
+				"comment",
+				"punctuation",
+				"storage.type.function.arrow",
+				"meta.brace",
+				"keyword.operator",
+				"string.quoted.docstring",
+				"constant.character.format.placeholder.other.python",
+				"keyword.other.alias.sql",
+				"keyword.other.order.sql",
+				"keyword.other.DDL.create.II.sql"
+			],
 			"settings": {
 				"foreground": "#abb1ba"
 			}
