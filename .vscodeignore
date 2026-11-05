@@ -1,0 +1,10 @@
+.github/**
+.vscode/**
+scripts/**
+test/**
+img/**
+!img/logo.png
+.prettierrc.json
+.gitignore
+DEVELOPMENT.md
+**/*.vsix

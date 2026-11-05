@@ -1,7 +1,7 @@
 {
 	"name": "koipop",
 	"displayName": "Koipop",
-	"description": "Cool relaxing color theme for VS Code with vibrant assertive token colors.",
+	"description": "Cool relaxing color theme for VS Code with vibrant assertive token colors. Dark and light.",
 	"publisher": "dhoulb",
 	"author": "Dave Houlbrooke <dave@shax.com>",
 	"license": "0BSD",
@@ -23,10 +23,16 @@
 				"label": "Koipop Dark",
 				"uiTheme": "vs-dark",
 				"path": "./themes/koipop-dark.json"
+			},
+			{
+				"label": "Koipop Light",
+				"uiTheme": "vs",
+				"path": "./themes/koipop-light.json"
 			}
 		]
 	},
 	"scripts": {
+		"build:light": "node scripts/build-light.js",
 		"fix": "prettier '**/*.{md,html,yml,yaml,json,css,js,ts}' --write",
 		"publish": "vsce publish"
 	},
