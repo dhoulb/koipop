@@ -298,14 +298,25 @@
 		},
 		{
 			"name": "Green: functions e.g. `myFunc()`",
-			"scope": ["entity.name.function", "support.function"],
+			"scope": ["entity.name.function", "support.function", "meta.function-call.generic.python"],
 			"settings": {
 				"foreground": "#92f416"
 			}
 		},
 		{
 			"name": "Yellow: classes e.g. `new MyClass()`",
-			"scope": ["entity.name.type.class", "entity.other.inherited-class", "variable.language.this", "variable.language.super", "markup.bold", "markup.italic"],
+			"scope": [
+				"entity.name.type.class",
+				"entity.other.inherited-class",
+				"variable.language.this",
+				"variable.language.super",
+				"markup.bold",
+				"markup.italic",
+				"support.class",
+				"variable.language.self",
+				"variable.language.special.self",
+				"variable.parameter.function.language.special.self"
+			],
 			"settings": {
 				"foreground": "#ffe01a"
 			}
@@ -319,14 +330,60 @@
 		},
 		{
 			"name": "Pink: keywords e.g. `export` or `readonly` or `private`, declarations e.g. `const` and `function`",
-			"scope": ["keyword.control", "keyword.operator.new", "keyword.operator.expression", "storage.modifier", "storage.type", "entity.other.attribute-name.pseudo-class", "entity.name.tag"],
+			"scope": [
+				"keyword.control",
+				"keyword.operator.new",
+				"keyword.operator.expression",
+				"storage.modifier",
+				"storage.type",
+				"entity.other.attribute-name.pseudo-class",
+				"entity.name.tag",
+				"keyword.operator.logical.python",
+				"keyword.other.namespace.php",
+				"keyword.other.use.php",
+				"keyword.other.new.php",
+				"keyword.operator.as.php",
+				"keyword.package.go",
+				"keyword.const.go",
+				"keyword.var.go",
+				"keyword.type.go",
+				"keyword.struct.go",
+				"keyword.interface.go",
+				"keyword.map.go",
+				"keyword.channel.go",
+				"keyword.function.go",
+				"keyword.other.rust",
+				"keyword.other.fn.rust",
+				"keyword.other.special-method.ruby",
+				"source.sql keyword",
+				"keyword.other.important.css"
+			],
 			"settings": {
 				"foreground": "#f43789"
 			}
 		},
 		{
 			"name": "Cyan: primitive types e.g. `string`, complex types e.g. `MyType`",
-			"scope": ["support.type.builtin", "support.type.primitive", "entity.name.type", "punctuation.definition.heading", "string.other.link.title", "entity.other.attribute-name"],
+			"scope": [
+				"support.type.builtin",
+				"support.type.primitive",
+				"entity.name.type",
+				"punctuation.definition.heading",
+				"string.other.link.title",
+				"entity.other.attribute-name",
+				"keyword.other.type.php",
+				"support.type.python",
+				"support.other.namespace",
+				"entity.name.namespace",
+				"storage.type.string.go",
+				"storage.type.numeric.go",
+				"storage.type.boolean.go",
+				"storage.type.error.go",
+				"storage.type.byte.go",
+				"storage.type.rune.go",
+				"storage.type.uintptr.go",
+				"storage.type.sql"
+			],
 			"settings": {
 				"foreground": "#15f4e5"
 			}
@@ -353,15 +410,44 @@
 			}
 		},
 		{
-			"name": "White: variables, object keys, markup",
-			"scope": ["variable", "support.type.property-name", "entity.name.label", "meta.object-literal.key string", "markup", "markup string", "meta.paragraph", "constant.other.color", "text.html.derivative"],
+			"name": "White: variables, object keys, markup, plain identifiers in languages that leave them unscoped (Python, Ruby, Rust)",
+			"scope": [
+				"variable",
+				"support.type.property-name",
+				"entity.name.label",
+				"meta.object-literal.key string",
+				"markup",
+				"markup string",
+				"meta.paragraph",
+				"constant.other.color",
+				"text.html.derivative",
+				"source.python",
+				"source.ruby",
+				"source.rust",
+				"constant.other.php",
+				"constant.other.class.php",
+				"entity.name.tag.yaml",
+				"constant.other.table-name.sql",
+				"constant.other.database-name.sql"
+			],
 			"settings": {
 				"foreground": "#ffffff"
 			}
 		},
 		{
-			"name": "Grey: punctuation, comments",
-			"scope": ["comment", "punctuation", "storage.type.function.arrow", "meta.brace"],
+			"name": "Grey: punctuation, operators, comments and docstrings",
+			"scope": [
+				"comment",
+				"punctuation",
+				"storage.type.function.arrow",
+				"meta.brace",
+				"keyword.operator",
+				"string.quoted.docstring",
+				"constant.character.format.placeholder.other.python",
+				"keyword.other.alias.sql",
+				"keyword.other.order.sql",
+				"keyword.other.DDL.create.II.sql"
+			],
 			"settings": {
 				"foreground": "#abb1ba"
 			}
