@@ -11,7 +11,7 @@
 
 - `themes/koipop-dark.json` is the source of truth. Do not edit `themes/koipop-light.json` by hand.
 - After you change the dark theme, run `npm run build:light` to regenerate the light theme.
-- `scripts/build-light.js` maps each dark grey to its role on the light end of the same scale. Accent text uses a darker shade of the same hue, so it reads on white.
+- `scripts/build-light.js` maps each dark grey to its role on the light end of the same scale. Accent text uses the same hue as dark, toned down slightly for white (values in `TEXT_ACCENT`).
 
 ## Screenshots
 

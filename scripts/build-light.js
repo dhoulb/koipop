@@ -59,18 +59,20 @@ const ON_ACCENT = new Set([
 	"editorCursor.background",
 ]);
 
-// Accents used as text need a darker shade of the same hue to read on white
-// (OKLCH hue kept, lightness lowered to 4.5:1 on #ffffff). Blue, red and pink
-// already pass, so they stay as they are.
+// Accents used as text, tuned by eye on white (Koipop Light tuner): each keeps
+// its dark-theme hue with as little lightness taken off as reads well.
+// Accent backgrounds (buttons, badges, selections) keep the dark-theme values.
 const TEXT_ACCENT = STRICT
 	? {}
 	: {
-			"#f047ff": "#cb09db", // purple
-			"#ffb21a": "#9f6d04", // orange
-			"#92f416": "#4c8400", // green
-			"#ffe01a": "#877604", // yellow
-			"#15f4e5": "#04857d", // cyan
-			"#f2d7a0": "#9f6d04", // sand (warning icon) -> orange, like other warnings
+			"#ffe01a": "#baa30b", // yellow
+			"#ffb21a": "#faad0c", // orange
+			"#92f416": "#89e70b", // green
+			"#15f4e5": "#10e2d4", // cyan
+			"#f047ff": "#e53af5", // purple
+			"#2f78e5": "#1964cf", // blue
+			"#e5352f": "#d41f1f", // red
+			"#f2d7a0": "#faad0c", // sand (warning icon) -> orange, like other warnings
 		};
 
 // Terminal: black and white swap ends; colours follow TEXT_ACCENT.
